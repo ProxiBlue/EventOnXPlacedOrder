@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+	<ProxiBlue_EventOnXPlacedOrder>
+	    <version>1.0.0</version>
+	</ProxiBlue_EventOnXPlacedOrder>
+    </modules>
+    <global>
+	<models>
+	    <proxiblue_eventonxplacedorder>
+		<class>ProxiBlue_EventOnXPlacedOrder_Model</class>
+	    </proxiblue_eventonxplacedorder>
+	</models>
+	<events>
+	    <sales_order_place_after>
+		<observers>
+		    <customer_x_placed_order>
+			<class>proxiblue_eventonxplacedorder/observer</class>
+			<method>customer_x_placed_order</method>
+		    </customer_x_placed_order>
+		</observers>
+	    </sales_order_place_after>
+	</events>
+    </global>
+</config>
